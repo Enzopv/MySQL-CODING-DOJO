@@ -1,0 +1,23 @@
+CREATE DATABASE enzo;
+
+USE enzo;
+
+CREATE TABLE usuarios (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    direccion VARCHAR(100),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO usuarios (nombre, apellido, direccion) VALUES ('Enzo', 'Pérez', 'SQL 2020');
+INSERT INTO usuarios (nombre, apellido, direccion) VALUES ('Romina', 'Pérez', NULL);
+
+SELECT * FROM usuarios;
+SELECT nombre FROM usuarios;
+SELECT * FROM usuarios WHERE id = 2;
+
+
+UPDATE usuarios SET direccion = 'SQL 2021' WHERE id = 2;
+
+DELETE FROM usuarios WHERE id = 1;
